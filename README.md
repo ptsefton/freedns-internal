@@ -20,4 +20,5 @@ If you are comfortable with the commandline and you have a *nix type computer su
       Look in your browser address bar, it will be like ```https://freedns.afraid.org/dynamic/update.php?your-key-will-be-here```
    *  Copy the secret key, which is the part of the URL after the ```?```
 *  Edit [.freedns_secret](.freedns_secret) to add your secret key
+    ```{"secret":"put-your-key-here"}```
 *  Set up a cron job to run [set-freedns-internal-ip.py](./set-freedns-internal-ip.py) at some suitable interval - I do it once a minute

@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 import os
 import socket
 import json
@@ -8,7 +7,7 @@ from urllib.request import urlopen
 
 dir = os.path.dirname(__file__)
 secret_path = os.path.join(dir, '.freedns_secret')
-ip_path = os.path.join(dir, '.freedns_secret')
+ip_path = os.path.join(dir, '.ip')
 
 secret = json.load(open(secret_path, 'r'))['secret']
 url = 'https://freedns.afraid.org/dynamic/update.php?%s&address=%s'

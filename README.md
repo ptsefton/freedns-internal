@@ -8,18 +8,18 @@ I was working with a Rasberry Pi computer with no monitor or keyboard, and I wan
 
 ## Who is it for?
 
-If you are comfortable with the commandline and you have a *nix type computer such as a Raspberry PI running Linux you'd like to find on your internal network then this is for you.
+If you are comfortable with the commandline and you have a \*nix type computer such as a Raspberry PI running Linux you'd like to find on your internal network then this is for you.
 
 ## How to use
 
-*  Check out this repository
-*  Sign up for an account at freedns.afraid.org
-*  Get your secret key:
-   *  Visit this page [https://freedns.afraid.org/dynamic/](https://freedns.afraid.org/dynamic/)
-   *  Click ```Direct URL```
-      Look in your browser address bar, it will be like ```https://freedns.afraid.org/dynamic/update.php?your-key-will-be-here```
-   *  Copy the secret key, which is the part of the URL after the ```?```
-*  Copy [.freedns_secret.example](.freedns_secret.example) to [.freedns_secret](.freedns_secret) and edit it to add your secret key
-    ```{"secret":"put-your-key-here"}```
-*  Set up a cron job to run [set-freedns-internal-ip.py](./set-freedns-internal-ip.py) at some suitable interval - I do it every five minutes
-    ```0,5,10,15,20,25,30,35,40,45,50,55 * * * * sleep 15 ; /path/to/freedns-internal/set-freedns-internal-ip.py >> /tmp/freedns.log 2>&1 &```
+ * Check out this repository
+ * Sign up for an account at freedns.afraid.org
+ * Get your secret key:
+    * Visit this page [https://freedns.afraid.org/dynamic/](https://freedns.afraid.org/dynamic/)
+    * Click `Direct URL`
+       Look in your browser address bar, it will be like `https://freedns.afraid.org/dynamic/update.php?your-key-will-be-here`
+    * Copy the secret key, which is the part of the URL after the `?`
+ * Copy `.freedns_secret.example` to `.freedns_secret` and edit it to add your secret key
+     `{"secret":"put-your-key-here"}`
+ * Set up a cron job to run [set-freedns-internal-ip.py](./set-freedns-internal-ip.py) at some suitable interval - I do it every five minutes
+     `0,5,10,15,20,25,30,35,40,45,50,55 * * * * sleep 15 ; /path/to/freedns-internal/set-freedns-internal-ip.py >> /tmp/freedns.log 2>&1 &`
